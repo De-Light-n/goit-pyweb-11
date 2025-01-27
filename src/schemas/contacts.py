@@ -1,5 +1,7 @@
-from pydantic import BaseModel, Field
 from datetime import datetime
+from pydantic import BaseModel, Field
+
+from src.schemas.users import UserResponse
 
 
 class ContactShema(BaseModel):
@@ -12,6 +14,8 @@ class ContactShema(BaseModel):
 class ContactResponse(ContactShema):
     id: int = Field(default=1, ge=1)
     created_at: datetime = Field(default_factory=datetime.now)
+    user: UserResponse | None
+    
     
     class Config:
         from_attributes = True
