@@ -1,6 +1,7 @@
 from re import A
 from typing import Optional
 from fastapi import APIRouter, status, Depends, HTTPException, Query
+from fastapi_limiter.depends import RateLimiter
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.entity.models import User
@@ -12,7 +13,11 @@ from src.services.auth import auth_service
 router = APIRouter(prefix="/contacts", tags=["contacts"])
 
 
-@router.get("/birthdays-soon", response_model=list[ContactResponse])
+@router.get(
+    "/birthdays-soon",
+    response_model=list[ContactResponse],
+    dependencies=[Depends(RateLimiter(times=5, seconds=20))],
+)
 async def get_birthdays_soon(
     offset: int = Query(0, ge=0),
     limit: int = Query(10, ge=10, lt=500),
@@ -25,7 +30,11 @@ async def get_birthdays_soon(
     return contacts
 
 
-@router.get("/", response_model=list[ContactResponse])
+@router.get(
+    "/",
+    response_model=list[ContactResponse],
+    dependencies=[Depends(RateLimiter(times=5, seconds=20))],
+)
 async def get_contacts(
     name: Optional[str] = None,
     surname: Optional[str] = None,
@@ -41,7 +50,11 @@ async def get_contacts(
     return contacts
 
 
-@router.get("/{contact_id}", response_model=ContactResponse)
+@router.get(
+    "/{contact_id}",
+    response_model=ContactResponse,
+    dependencies=[Depends(RateLimiter(times=5, seconds=20))],
+)
 async def get_contact(
     contact_id: int,
     db: AsyncSession = Depends(get_db),
@@ -55,7 +68,12 @@ async def get_contact(
     return contact
 
 
-@router.post("/", response_model=ContactResponse, status_code=status.HTTP_201_CREATED)
+@router.post(
+    "/",
+    response_model=ContactResponse,
+    status_code=status.HTTP_201_CREATED,
+    dependencies=[Depends(RateLimiter(times=5, seconds=20))],
+)
 async def create_contact(
     body: ContactShema,
     db: AsyncSession = Depends(get_db),

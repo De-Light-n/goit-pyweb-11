@@ -30,7 +30,6 @@ class DatabaseSessionManager:
         finally:
             await session.close()
 
-
 sessionmanager = DatabaseSessionManager(config.DB_URL)
 
 
