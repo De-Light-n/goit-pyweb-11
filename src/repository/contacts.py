@@ -15,6 +15,7 @@ async def get_contacts(
     db: AsyncSession,
     user: User,
 ):
+    
     filters = []
     if name:
         filters.append(Contact.name.ilike(f"%{name}%"))
