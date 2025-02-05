@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Rest API’s documentation! &#8212; Contacts API  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css?v=279e0f84" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Contacts API  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to Rest API’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="welcome-to-rest-api-s-documentation">
+<h1>Welcome to Rest API’s documentation!<a class="headerlink" href="#welcome-to-rest-api-s-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-main">
+<span id="rest-api-main"></span><h1>REST API main<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="main.lifespan">
+<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">lifespan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FastAPI</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.lifespan" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="main.root">
+<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.root" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-src.repository.contacts">
+<span id="rest-api-repository-contacts"></span><h1>REST API repository Contacts<a class="headerlink" href="#module-src.repository.contacts" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.create_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">create_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactShema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.create_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This Python function creates a new contact record in a database using the provided data and user
+information.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>body (ContactShema): ContactSchema object containing the data for creating a new contact.
+db (AsyncSession): The <cite>db</cite> parameter in the <cite>create_contact</cite> function is an instance of an</p>
+</dd>
+</dl>
+<p>asynchronous database session (<cite>AsyncSession</cite>). This session is used to interact with the database
+in an asynchronous manner, allowing you to perform database operations such as adding, committing,
+and refreshing data.</p>
+<blockquote>
+<div><p>user (User): The <cite>user</cite> parameter in the <cite>create_contact</cite> function is an instance of the <cite>User</cite></p>
+</div></blockquote>
+<p>class. It is used to associate the newly created contact with a specific user.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>create_contact</cite> is returning the newly created <cite>contact</cite> object after it has been</p>
+</dd>
+</dl>
+<p>added to the database, committed, and refreshed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.delete_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">delete_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.delete_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This function deletes a contact from the database based on the contact ID and user, if the contact
+exists.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>contact_id (int): The <cite>contact_id</cite> parameter is an integer that represents the unique identifier</p>
+</dd>
+<dt>of the contact that you want to delete from the database.</dt><dd><p>db (AsyncSession): The <cite>db</cite> parameter is an instance of an asynchronous database session</p>
+</dd>
+</dl>
+<p>(<cite>AsyncSession</cite>). It is used to interact with the database in an asynchronous manner, allowing you
+to execute queries and perform database operations without blocking the main thread. In the provided
+function <cite>delete_contact</cite>, the <cite>db</cite> parameter is used</p>
+<blockquote>
+<div><p>user (User): The <cite>user</cite> parameter in the <cite>delete_contact</cite> function is an instance of the <cite>User</cite></p>
+</div></blockquote>
+<p>class. It is used to filter the contact that needs to be deleted based on the user who owns the
+contact.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>delete_contact</cite> returns the deleted contact if it exists, otherwise it returns</p>
+</dd>
+</dl>
+<p><cite>None</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.get_birthdays_soon">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_birthdays_soon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.get_birthdays_soon" title="Link to this definition">¶</a></dt>
+<dd><p>This function retrieves upcoming birthdays of contacts within a specified timeframe for a given user
+from a database session asynchronously.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>offset (int): The <cite>offset</cite> parameter is used to specify the starting index from where the query</p>
+</dd>
+</dl>
+<p>should begin fetching results. It is typically used for pagination, allowing you to retrieve results
+in chunks rather than all at once.</p>
+<blockquote>
+<div><p>limit (int): The <cite>limit</cite> parameter in the <cite>get_birthdays_soon</cite> function specifies the maximum</p>
+</div></blockquote>
+<p>number of contacts to retrieve from the database. It limits the number of results returned by the
+query to the specified value.</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the function <cite>get_birthdays_soon</cite> is an AsyncSession</p>
+</div></blockquote>
+<p>object that represents a connection to the database. It is used to execute queries asynchronously
+and interact with the database to retrieve contact information for upcoming birthdays.</p>
+<blockquote>
+<div><p>user (User): The <cite>user</cite> parameter in the function <cite>get_birthdays_soon</cite> is of type <cite>User</cite>. It is</p>
+</div></blockquote>
+<p>used to filter contacts based on the user to whom they belong. This parameter helps in retrieving
+contacts whose birthdays are coming up soon for a specific user.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>get_birthdays_soon</cite> returns a list of contacts whose birthdays fall within the next</p>
+</dd>
+</dl>
+<p>7 days starting from today’s date. The contacts are filtered based on the provided <cite>user</cite> parameter
+and are retrieved from the database using the provided <cite>db</cite> AsyncSession. The function returns the
+list of contacts that meet the specified criteria.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.get_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.get_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function retrieves a contact from the database based on the contact ID and user.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>contact_id (int): The <cite>contact_id</cite> parameter is an integer that represents the unique identifier</p>
+</dd>
+<dt>of the contact you want to retrieve from the database.</dt><dd><p>db (AsyncSession): AsyncSession is an asynchronous database session object that allows you to</p>
+</dd>
+</dl>
+<p>interact with the database asynchronously. It is typically used in asynchronous Python applications
+that work with databases using an ORM (Object-Relational Mapping) library like SQLAlchemy.</p>
+<blockquote>
+<div><p>user (User): The <cite>user</cite> parameter in the <cite>get_contact</cite> function is an instance of the <cite>User</cite></p>
+</div></blockquote>
+<p>class. It is used to filter the query to retrieve a specific contact associated with that user.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>get_contact</cite> is returning a single <cite>Contact</cite> object that matches the provided</p>
+</dd>
+</dl>
+<p><cite>contact_id</cite> and belongs to the specified <cite>user</cite>. The return value is obtained using the
+<cite>scalar_one_or_none()</cite> method, which will return either the single result found or <cite>None</cite> if no
+matching contact is found.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.get_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.get_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function retrieves contacts based on specified criteria from a database session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – The <cite>name</cite> parameter is a string used to filter contacts by their name. If provided,</p>
+</dd>
+</dl>
+<p>contacts with names containing the specified string will be included in the results
+:type name: str
+:param surname: The <cite>surname</cite> parameter in the <cite>get_contacts</cite> function is used to filter contacts
+based on the surname of the contact. If a value is provided for the <cite>surname</cite> parameter, contacts
+with surnames that match the provided value (partially or fully) will be included in the results
+:type surname: str
+:param email: The <cite>email</cite> parameter in the <cite>get_contacts</cite> function is used as a filter criteria to
+search for contacts whose email addresses contain the specified value. If a value is provided for
+the <cite>email</cite> parameter, contacts with email addresses that match the provided value (partially or
+fully) will be included
+:type email: str
+:param offset: The <cite>offset</cite> parameter in the <cite>get_contacts</cite> function is used to specify the number
+of results to skip before starting to return data. It is typically used for pagination, where you
+can retrieve a subset of results starting from a specific position in the result set
+:type offset: int
+:param limit: The <cite>limit</cite> parameter in the <cite>get_contacts</cite> function specifies the maximum number of
+contacts that should be returned in the result set. It limits the number of contacts that will be
+retrieved from the database and returned by the function
+:type limit: int
+:param db: The <cite>db</cite> parameter in the <cite>get_contacts</cite> function is an AsyncSession object. This object
+represents a connection to the database that allows you to execute asynchronous database queries. It
+is used to interact with the database and perform operations like executing queries, committing
+transactions, and managing database connections in an asynchronous
+:type db: AsyncSession
+:param user: The <cite>user</cite> parameter in the <cite>get_contacts</cite> function is of type <cite>User</cite>. It is used to
+filter contacts based on the user to whom they belong. The function retrieves contacts from the
+database that match the specified criteria (name, surname, email) and belong to the specified user
+:type user: User
+:return: The function <cite>get_contacts</cite> returns a list of contacts that match the specified criteria
+(name, surname, email) for a specific user. The contacts are retrieved from the database using the
+provided AsyncSession <cite>db</cite> and the query is filtered based on the input parameters. The function
+returns all the contacts that match the criteria within the specified offset and limit.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.contacts.update_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.contacts.</span></span><span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactShema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.contacts.update_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This async function updates a contact in the database based on the provided contact ID, user, and
+contact information.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>contact_id (int): The <cite>contact_id</cite> parameter is an integer that represents the unique identifier</p>
+</dd>
+<dt>of the contact that you want to update in the database.</dt><dd><p>body (ContactShema): The <cite>body</cite> parameter in the <cite>update_contact</cite> function represents the data</p>
+</dd>
+</dl>
+<p>that will be used to update the contact information. It likely contains fields such as <cite>name</cite>,
+<cite>surname</cite>, <cite>phone_number</cite>, and <cite>birthdate</cite> which will be used to update the corresponding fields of
+the contact identified by `</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>update_contact</cite> function is an instance of an</p>
+</div></blockquote>
+<p>asynchronous database session (<cite>AsyncSession</cite>). This session is used to interact with the database
+asynchronously, allowing you to execute queries and commit transactions in an asynchronous manner.</p>
+<blockquote>
+<div><p>user (User): The <cite>user</cite> parameter in the <cite>update_contact</cite> function represents the user who is</p>
+</div></blockquote>
+<p>updating the contact information. This parameter is used to ensure that the user can only update
+contacts that belong to them. The function filters contacts based on both the <cite>contact_id</cite> and the
+<cite>user</cite> to make sure</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The <cite>update_contact</cite> function is returning the updated contact object after updating its</p>
+</dd>
+</dl>
+<p>attributes with the values provided in the <cite>body</cite> parameter.</p>
+</dd></dl>
+
+</section>
+<section id="module-src.repository.users">
+<span id="rest-api-repository-users"></span><h1>REST API repository Users<a class="headerlink" href="#module-src.repository.users" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.confirmed_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">confirmed_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.repository.users.confirmed_email" title="Link to this definition">¶</a></dt>
+<dd><p>This function confirms a user’s email address in a database by updating the user’s confirmation
+status to True.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>email (str): The <cite>email</cite> parameter is a string that represents the email address of the user whose</p>
+</dd>
+<dt>email confirmation status needs to be updated.</dt><dd><p>db (AsyncSession): The <cite>db</cite> parameter is an asynchronous session object that is used to interact</p>
+</dd>
+</dl>
+<p>with the database. It allows you to perform database operations such as querying, updating, and
+committing data in an asynchronous manner. In this context, it is being used to retrieve a user by
+email, update the user’s confirmation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.create_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UserShema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.users.create_user" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>create_user</cite> creates a new user in a database with an optional Gravatar avatar based
+on the provided user data.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>body (UserShema): The <cite>body</cite> parameter in the <cite>create_user</cite> function is of type <cite>UserSchema</cite>,</p>
+</dd>
+</dl>
+<p>which likely contains information about the user being created, such as their name, email, and any
+other relevant details.</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>create_user</cite> function is an instance of an</p>
+</div></blockquote>
+<p>asynchronous database session. It is used to interact with the database to add a new user record,
+commit the changes, and refresh the session with the newly added user.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>create_user</cite> is returning the newly created user object after adding it to the</p>
+</dd>
+</dl>
+<p>database, committing the changes, and refreshing the object from the database.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.get_user_by_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">get_user_by_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.users.get_user_by_email" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>get_user_by_email</cite> retrieves a user from the database based on their email address.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>email (str): The <cite>email</cite> parameter is a string that represents the email address of the user you</p>
+</dd>
+<dt>want to retrieve from the database.</dt><dd><p>db (AsyncSession): The <cite>db</cite> parameter is an instance of an asynchronous database session that is</p>
+</dd>
+</dl>
+<p>used to interact with the database. In this case, it is obtained using the <cite>get_db</cite> dependency,
+which likely sets up the database connection and session for the function to use. The
+<cite>get_user_by_email</cite> function</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>get_user_by_email</cite> is returning a user object based on the email provided. If a user</p>
+</dd>
+</dl>
+<p>with the specified email exists in the database, that user object will be returned. If no user is
+found with the given email, the function will return <cite>None</cite>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.update_avatar">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">update_avatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">User</span></span></span><a class="headerlink" href="#src.repository.users.update_avatar" title="Link to this definition">¶</a></dt>
+<dd><p>This async function updates the avatar URL for a user in a database based on their email.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>email: The <cite>email</cite> parameter is a string representing the email address of the user whose avatar</p>
+</dd>
+<dt>you want to update.</dt><dd><p>url (str): The <cite>url</cite> parameter in the <cite>update_avatar</cite> function is a string that represents the new</p>
+</dd>
+<dt>avatar URL that will be assigned to the user with the specified email address.</dt><dd><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>update_avatar</cite> function is an instance of an</p>
+</dd>
+</dl>
+<p>asynchronous database session (<cite>AsyncSession</cite>). This parameter is used to interact with the database
+to update the user’s avatar URL.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>update_avatar</cite> returns a <cite>User</cite> object after updating the avatar URL for the user</p>
+</dd>
+</dl>
+<p>with the specified email in the database.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.repository.users.update_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.repository.users.</span></span><span class="sig-name descname"><span class="pre">update_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.repository.users.update_token" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function updates the refresh token for a user in a database session.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>user (User): User object representing a user in the system
+token (str|None): The <cite>token</cite> parameter is a string that represents the new refresh token for the</p>
+</dd>
+<dt>user. It can also be <cite>None</cite> if the user wants to remove the refresh token.</dt><dd><p>db (AsyncSession): The <cite>db</cite> parameter is an asynchronous session object that allows you to</p>
+</dd>
+</dl>
+<p>interact with the database in an asynchronous manner. In this context, it is used to commit the
+changes made to the <cite>user</cite> object’s refresh token to the database.</p>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.contacts">
+<span id="rest-api-routes-contacts"></span><h1>REST API routes Contacts<a class="headerlink" href="#module-src.routes.contacts" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.create_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">create_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactShema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.create_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function creates a contact using the provided data and database session, with
+authentication based on the current user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>body</strong> – The <cite>body</cite> parameter in the <cite>create_contact</cite> function is of type <cite>ContactSchema</cite>. It</p>
+</dd>
+</dl>
+<p>likely contains the data needed to create a new contact entry in the database
+:type body: ContactShema
+:param db: The <cite>db</cite> parameter in the <cite>create_contact</cite> function is an instance of an asynchronous
+database session. It is used to interact with the database to perform operations like creating a new
+contact record. In this case, it is obtained using the <cite>get_db</cite> dependency, which likely provides a
+connection to
+:type db: AsyncSession
+:param current_user: The <cite>current_user</cite> parameter in the <cite>create_contact</cite> function represents the
+user who is currently authenticated and making the request. This parameter is obtained by using the
+<cite>auth_service.get_current_user</cite> dependency, which likely handles the authentication and
+authorization logic to identify the current user. This user is then passed
+:type current_user: User
+:return: The function <cite>create_contact</cite> is returning the contact that was created in the database.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.delete_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">delete_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.delete_contact" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>delete_contact</cite> function deletes a contact from the database with the specified contact ID
+after verifying the current user’s authentication.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>contact_id</strong> – The <cite>contact_id</cite> parameter is an integer that represents the unique identifier of</p>
+</dd>
+</dl>
+<p>the contact that you want to delete from the database
+:type contact_id: int
+:param db: The <cite>db</cite> parameter is an instance of an <cite>AsyncSession</cite> object, which is used to interact
+with the database asynchronously. It is obtained as a dependency using the <cite>get_db</cite> function
+:type db: AsyncSession
+:param current_user: The <cite>current_user</cite> parameter is of type <cite>User</cite> and is obtained by calling the
+<cite>get_current_user</cite> function from the <cite>auth_service</cite> module as a dependency in the <cite>delete_contact</cite>
+function. This parameter represents the user who is currently authenticated and making the request
+to delete a contact
+:type current_user: User
+:return: The <cite>delete_contact</cite> function is returning the deleted contact object after successfully
+deleting it from the database.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.get_birthdays_soon">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">get_birthdays_soon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Query(0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Query(10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.get_birthdays_soon" title="Link to this definition">¶</a></dt>
+<dd><p>This asynchronous Python function retrieves upcoming birthdays of contacts based on specified offset
+and limit parameters, while also requiring database access and authentication of the current user.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>offset (int): The <cite>offset</cite> parameter is used to specify the starting point from which to retrieve</p>
+</dd>
+</dl>
+<p>birthdays. It indicates the number of records to skip before starting to return results. In the
+provided code snippet, the <cite>offset</cite> parameter has a default value of 0 and must be a non-negative
+integer (greater than</p>
+<blockquote>
+<div><p>limit (int): The <cite>limit</cite> parameter in the <cite>get_birthdays_soon</cite> function specifies the maximum</p>
+</div></blockquote>
+<p>number of birthdays to retrieve. By default, it is set to 10, and it must be greater than or equal
+to 10 and less than 500. This means that the function will return a maximum</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the function <cite>get_birthdays_soon</cite> is of type</p>
+</div></blockquote>
+<p><cite>AsyncSession</cite> and is obtained by calling the <cite>get_db</cite> dependency. This parameter is used to
+interact with the database asynchronously within the function.</p>
+<blockquote>
+<div><p>current_user (User): The <cite>current_user</cite> parameter in the <cite>get_birthdays_soon</cite> function is of type</p>
+</div></blockquote>
+<p><cite>User</cite> and is obtained by calling the <cite>get_current_user</cite> function from the <cite>auth_service</cite> module as
+a dependency. This parameter represents the currently authenticated user who is making the request
+to fetch upcoming</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>get_birthdays_soon</cite> is returning a list of contacts whose birthdays are coming soon.</p>
+</dd>
+</dl>
+<p>The contacts are retrieved from the database using the <cite>repository_contacts.get_birthdays_soon</cite>
+method with the provided offset, limit, database session (<cite>db</cite>), and current user information.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.get_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.get_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function retrieves a contact by ID from a database, with authentication and error
+handling.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>contact_id (int): The <cite>contact_id</cite> parameter is an integer that represents the unique identifier</p>
+</dd>
+<dt>of the contact you want to retrieve from the database.</dt><dd><p>db (AsyncSession): The <cite>db</cite> parameter is an instance of an asynchronous database session</p>
+</dd>
+</dl>
+<p>(<cite>AsyncSession</cite>) that is used to interact with the database. It is obtained using the <cite>get_db</cite>
+dependency, which likely sets up the database connection for the request.</p>
+<blockquote>
+<div><p>current_user (User): The <cite>current_user</cite> parameter in the <cite>get_contact</cite> function is a dependency</p>
+</div></blockquote>
+<p>that retrieves the current user making the request. It is obtained by calling the <cite>get_current_user</cite>
+function from the <cite>auth_service</cite> module. This parameter ensures that only authenticated users can
+access the <cite>get_contact</cite> endpoint</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The <cite>get_contact</cite> function is returning the contact information corresponding to the <cite>contact_id</cite></p>
+</dd>
+</dl>
+<p>provided. If the contact is not found in the database, it raises an HTTPException with a status code
+of 404 and the detail message “Contact not found”.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.get_contacts">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">get_contacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Query(0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Query(10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.get_contacts" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>get_contacts</cite> function retrieves contacts based on specified criteria using async operations in
+Python.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>name (Optional[str]): The <cite>name</cite> parameter in the <cite>get_contacts</cite> function is an optional string</p>
+</dd>
+</dl>
+<p>parameter used to filter contacts by their name. If a <cite>name</cite> value is provided, only contacts with
+that specific name will be retrieved. If <cite>name</cite> is not provided (None), the function will not filter
+contacts</p>
+<blockquote>
+<div><p>surname (Optional[str]): The <cite>surname</cite> parameter in the <cite>get_contacts</cite> function is an optional</p>
+</div></blockquote>
+<p>parameter that represents the surname of a contact. It is used as a filter criteria to search for
+contacts based on their surname. If provided, the function will retrieve contacts with the specified
+surname. If not provided, this filter will</p>
+<blockquote>
+<div><p>email (Optional[str]): The <cite>email</cite> parameter in the <cite>get_contacts</cite> function is an optional</p>
+</div></blockquote>
+<p>parameter that allows you to filter contacts based on their email address. If you provide an email
+address, the function will return contacts that match that email address. If you do not provide an
+email address, it will not be used</p>
+<blockquote>
+<div><p>offset (int): The <cite>offset</cite> parameter in the <cite>get_contacts</cite> function is used to specify the</p>
+</div></blockquote>
+<p>starting index from which the contacts should be retrieved. It determines the position in the list
+of contacts where the retrieval should begin. The <cite>offset</cite> parameter is an integer value and has a
+default value of 0.</p>
+<blockquote>
+<div><p>limit (int): The <cite>limit</cite> parameter in the <cite>get_contacts</cite> function specifies the maximum number of</p>
+</div></blockquote>
+<p>contacts that should be returned in a single query. By default, the <cite>limit</cite> is set to 10, but it
+must be greater than or equal to 10 and less than 500. This means that</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>get_contacts</cite> function is of type <cite>AsyncSession</cite> and</p>
+</div></blockquote>
+<p>is obtained as a dependency using the <cite>get_db</cite> function. This parameter represents the asynchronous
+database session that will be used to interact with the database when querying for contacts.</p>
+<blockquote>
+<div><p>current_user (User): The <cite>current_user</cite> parameter in the <cite>get_contacts</cite> function is of type <cite>User</cite></p>
+</div></blockquote>
+<p>and is obtained by using the <cite>Depends</cite> function with the dependency <cite>auth_service.get_current_user</cite>.
+This parameter represents the current user who is making the request to get the contacts. It is
+likely used</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The <cite>get_contacts</cite> function is returning the contacts retrieved from the database based on the</p>
+</dd>
+</dl>
+<p>provided parameters such as name, surname, email, offset, and limit. The function is using the
+<cite>repository_contacts.get_contacts</cite> method to fetch the contacts from the database using the provided
+parameters and the database session (<cite>db</cite>) and the current user information (<cite>current_user</cite>). The
+retrieved contacts are then returned by the function</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.contacts.update_contact">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.contacts.</span></span><span class="sig-name descname"><span class="pre">update_contact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ContactShema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.contacts.update_contact" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function updates a contact in a database using the provided contact schema,
+contact ID, database session, and current user information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>body</strong> – The <cite>body</cite> parameter in the <cite>update_contact</cite> function represents the data that will be</p>
+</dd>
+</dl>
+<p>used to update a contact. It is expected to be of type <cite>ContactSchema</cite>, which likely contains the
+updated information for the contact such as name, email, phone number, etc. This data will be used
+:type body: ContactShema
+:param contact_id: The <cite>contact_id</cite> parameter in the <cite>update_contact</cite> function represents the unique
+identifier of the contact that you want to update in the database. This identifier is used to locate
+the specific contact record that needs to be updated with the new information provided in the <cite>body</cite>
+parameter
+:type contact_id: int
+:param db: The <cite>db</cite> parameter in the <cite>update_contact</cite> function is an instance of an <cite>AsyncSession</cite>
+object. This object is used to interact with the database asynchronously. It is typically obtained
+from a dependency called <cite>get_db</cite>, which provides a session to the function
+:type db: AsyncSession
+:param current_user: The <cite>current_user</cite> parameter in the <cite>update_contact</cite> function represents the
+user who is currently authenticated and making the request to update a contact. This parameter is
+obtained by using the <cite>Depends</cite> function with the <cite>auth_service.get_current_user</cite> dependency, which
+ensures that the user is authenticated before
+:type current_user: User
+:return: The <cite>update_contact</cite> function is returning the updated contact information after updating
+it in the database. If the contact is not found, it raises an HTTPException with a status code of
+404 and the detail message “contact not found”.</p>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.users">
+<span id="rest-api-routes-users"></span><h1>REST API routes Users<a class="headerlink" href="#module-src.routes.users" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.users.get_current_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.users.</span></span><span class="sig-name descname"><span class="pre">get_current_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.users.get_current_user" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>get_current_user</cite> returns the current user using dependency injection in Python’s
+FastAPI framework.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>user</strong> – The <cite>get_current_user</cite> function is an asynchronous function that takes a parameter</p>
+</dd>
+</dl>
+<p><cite>user</cite> of type <cite>User</cite>. The function uses the <cite>Depends</cite> function from FastAPI to retrieve the current
+user. The <cite>get_current_user</cite> function is likely a part of an authentication service that verifies
+the user
+:type user: User
+:return: The <cite>get_current_user</cite> function is returning the current user object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.users.update_avatar_user">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.users.</span></span><span class="sig-name descname"><span class="pre">update_avatar_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UploadFile</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">File(PydanticUndefined)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">User</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_current_user)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.users.update_avatar_user" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function updates the avatar of a user by uploading a file to Cloudinary and
+updating the user’s avatar URL in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> – The <cite>file</cite> parameter in the <cite>update_avatar_user</cite> function is of type <cite>UploadFile</cite> and</p>
+</dd>
+</dl>
+<p>is set to a default value of <cite>File()</cite>. This parameter is used to receive the uploaded file (avatar
+image) that the user wants to update
+:type file: UploadFile
+:param current_user: The <cite>current_user</cite> parameter in the <cite>update_avatar_user</cite> function represents
+the user who is currently authenticated and making the request. This parameter is obtained using the
+<cite>auth_service.get_current_user</cite> dependency, which likely handles the authentication logic and
+retrieves the current user object
+:type current_user: User
+:param db: The <cite>db</cite> parameter in the <cite>update_avatar_user</cite> function is an instance of an asynchronous
+database session. It is used to interact with the database to update the user’s avatar image URL
+after uploading the new avatar image to a cloud storage service (in this case, Cloudinary). The <cite>db
+:type db: AsyncSession
+:return: The function `update_avatar_user</cite> returns the updated user object after updating the avatar
+image URL in the database.</p>
+</dd></dl>
+
+</section>
+<section id="module-src.routes.auth">
+<span id="rest-api-routes-auth"></span><h1>REST API routes Auth<a class="headerlink" href="#module-src.routes.auth" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.confirmed_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">confirmed_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.confirmed_email" title="Link to this definition">¶</a></dt>
+<dd><p>This function confirms a user’s email if it has not been confirmed already.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>token (str): A string representing the token used for email verification.
+db (AsyncSession): The <cite>db</cite> parameter in the <cite>confirmed_email</cite> function is an instance of an</p>
+</dd>
+</dl>
+<p>asynchronous database session. It is used to interact with the database to perform operations like
+querying user data and updating the user’s email confirmation status. In this case, it is obtained
+using the <cite>get_db</cite> dependency function</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>a message indicating whether the email confirmation was successful or not. If the user’s email is</p>
+</dd>
+</dl>
+<p>already confirmed, it will return a message stating “Your email is already confirmed”. If the email
+was successfully confirmed during the function execution, it will return a message saying “Email
+confirmed”.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.login">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OAuth2PasswordRequestForm</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(NoneType)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.login" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>login</cite> function in Python handles user authentication by verifying credentials and generating
+access and refresh tokens.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>body (OAuth2PasswordRequestForm): The <cite>body</cite> parameter in the <cite>login</cite> function is of type</p>
+</dd>
+</dl>
+<p><cite>OAuth2PasswordRequestForm</cite>, which is likely a data model representing the username and password
+entered during the login process. It is being used to extract the username and password for
+authentication.</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>login</cite> function is an AsyncSession dependency</p>
+</div></blockquote>
+<p>obtained using the <cite>get_db</cite> function. This parameter represents the database session that will be
+used to interact with the database within the scope of the <cite>login</cite> function. It is typically used to
+perform database operations like querying</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The <cite>login</cite> function returns a dictionary containing the access token, refresh token, and token</p>
+</dd>
+</dl>
+<p>type. The structure of the returned dictionary is as follows:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.refresh_token">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">credentials</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HTTPAuthorizationCredentials</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(HTTPBearer)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.refresh_token" title="Link to this definition">¶</a></dt>
+<dd><p>This Python async function refreshes a user’s access token and refresh token based on a provided
+refresh token.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>credentials (HTTPAuthorizationCredentials): The <cite>credentials</cite> parameter in the <cite>refresh_token</cite></p>
+</dd>
+</dl>
+<p>function is of type <cite>HTTPAuthorizationCredentials</cite> and is obtained by calling the
+<cite>get_refresh_token</cite> dependency. It represents the authorization credentials (token) provided in the
+request header for refreshing the access token.</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>refresh_token</cite> function is an AsyncSession</p>
+</div></blockquote>
+<p>dependency that represents the database session used for database operations within the function. It
+is obtained through the <cite>get_db</cite> dependency injection. This parameter allows the function to
+interact with the database asynchronously to perform operations such as retrieving user</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The <cite>refresh_token</cite> function returns a dictionary containing the following keys and values:</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>“access_token”: the newly created access token</p></li>
+<li><p>“refresh_token”: the newly created refresh token</p></li>
+<li><p>“token_type”: “bearer”</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.request_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">request_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RequestEmail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BackgroundTasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.request_email" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>request_email</cite> checks if a user’s email is confirmed and sends a confirmation email if
+not.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>body (RequestEmail): <cite>RequestEmail</cite> - a data model representing the request body containing an</p>
+</dd>
+<dt>email address.</dt><dd><p>background_tasks (BackgroundTasks): The <cite>background_tasks</cite> parameter in the <cite>request_email</cite></p>
+</dd>
+</dl>
+<p>function is used to add tasks that should be run in the background. In this case, the function is
+adding a task to send an email for email confirmation in the background. This allows the function to
+return a response to the user without waiting</p>
+<blockquote>
+<div><p>request (Request): The <cite>request</cite> parameter in the <cite>request_email</cite> function is of type <cite>Request</cite>.</p>
+</div></blockquote>
+<p>It is used to access information related to the incoming HTTP request such as headers, cookies,
+query parameters, and more. In this function, the <cite>request</cite> parameter is not directly used, but it
+could be</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the function <cite>request_email</cite> is of type <cite>AsyncSession</cite></p>
+</div></blockquote>
+<p>and is used to interact with the database asynchronously. It is obtained as a dependency using the
+<cite>get_db</cite> function. This parameter allows the function to perform database operations such as
+querying the database to retrieve user</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The function <cite>request_email</cite> returns a message based on the conditions checked in the code. If the</p>
+</dd>
+</dl>
+<p>user’s email is already confirmed, it returns a message saying “Your email is already confirmed”. If
+the user is found and their email is not confirmed, it adds a task to send an email for confirmation
+and returns a message saying “Check your email for confirmation.”</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.routes.auth.signup">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.routes.auth.</span></span><span class="sig-name descname"><span class="pre">signup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UserShema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BackgroundTasks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.routes.auth.signup" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>signup</cite> function checks if a user already exists by email, creates a new user if not, and sends
+a confirmation email.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>body (UserShema): The <cite>body</cite> parameter in the <cite>signup</cite> function represents the data of the user</p>
+</dd>
+</dl>
+<p>that is being signed up. It is expected to be of type <cite>UserSchema</cite>, which likely contains
+information such as the user’s email, password, and other relevant details needed for creating a new
+user account.</p>
+<blockquote>
+<div><p>bt (BackgroundTasks): BackgroundTasks is a class provided by FastAPI that allows you to schedule</p>
+</div></blockquote>
+<p>background tasks to be run after a response is returned to the client. In the provided code snippet,
+the <cite>bt</cite> parameter is an instance of the BackgroundTasks class that is used to schedule the
+<cite>send_email</cite> task to be</p>
+<blockquote>
+<div><p>request (Request): The <cite>request</cite> parameter in the <cite>signup</cite> function is of type <cite>Request</cite>. It is</p>
+</div></blockquote>
+<p>used to access information about the incoming HTTP request, such as headers, cookies, and query
+parameters. In this context, it is being used to access the base URL of the incoming request using
+<a href="#id1"><span class="problematic" id="id2">`</span></a>request.base</p>
+<blockquote>
+<div><p>db (AsyncSession): The <cite>db</cite> parameter in the <cite>signup</cite> function is an <cite>AsyncSession</cite> object that</p>
+</div></blockquote>
+<p>represents an asynchronous database session. It is obtained as a dependency using the <cite>get_db</cite>
+function. This parameter is used to interact with the database to check if a user already exists,
+create a new user</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>The <cite>signup</cite> function is returning the newly created user object after successfully creating a new</p>
+</dd>
+</dl>
+<p>user in the database.</p>
+</dd></dl>
+
+</section>
+<section id="module-src.services.auth">
+<span id="rest-api-service-auth"></span><h1>REST API service Auth<a class="headerlink" href="#module-src.services.auth" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.services.auth.Auth">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.auth.</span></span><span class="sig-name descname"><span class="pre">Auth</span></span><a class="headerlink" href="#src.services.auth.Auth" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.ALGORITHM">
+<span class="sig-name descname"><span class="pre">ALGORITHM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HS256'</span></em><a class="headerlink" href="#src.services.auth.Auth.ALGORITHM" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.SECRET_KEY">
+<span class="sig-name descname"><span class="pre">SECRET_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'qyg7436gd973g4d976qe479gf346gfq37gfjw398fj0w358'</span></em><a class="headerlink" href="#src.services.auth.Auth.SECRET_KEY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.create_access_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_access_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expires_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.create_access_token" title="Link to this definition">¶</a></dt>
+<dd><p>This Python function creates an access token with optional expiration time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The <cite>data</cite> parameter in the <cite>create_access_token</cite> function is a dictionary</p>
+</dd>
+</dl>
+<p>containing the information that you want to encode into the access token. This data could
+include details such as the user’s ID, username, role, or any other relevant information that
+you want to include in the access token
+:type data: dict
+:param expires_delta: The <cite>expires_delta</cite> parameter in the <cite>create_access_token</cite> function is an
+optional parameter that specifies the duration for which the access token will be valid. It is a
+float value representing the number of seconds for the token to expire after it is created. If
+<cite>expires_delta</cite> is provided, the
+:type expires_delta: Optional[float]
+:return: The function <cite>create_access_token</cite> returns the encoded access token as a string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.create_email_token">
+<span class="sig-name descname"><span class="pre">create_email_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.create_email_token" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>create_email_token</cite> generates a JWT token with specified data and expiration time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – The <cite>data</cite> parameter in the <cite>create_email_token</cite> function is a dictionary containing the information that you want to encode into a JWT token. This data could include details such as the user’s email address, user ID, or any other relevant information that you want to include in the token</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A JWT token is being returned after encoding the provided data dictionary along with the current timestamp and an expiration timestamp set to 7 days from the current time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.create_refresh_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expires_delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.create_refresh_token" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>create_refresh_token</cite> function generates a JWT refresh token with specified data and
+expiration time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – The <cite>data</cite> parameter in the <cite>create_refresh_token</cite> function is a dictionary</p>
+</dd>
+</dl>
+<p>containing the information that needs to be encoded into the refresh token. This data could
+include user-specific information or any other data that you want to include in the token
+payload
+:type data: dict
+:param expires_delta: The <cite>expires_delta</cite> parameter in the <cite>create_refresh_token</cite> function is an
+optional parameter that specifies the time duration (in seconds) for which the refresh token
+will be valid. If <cite>expires_delta</cite> is provided, the refresh token will expire after the specified
+number of seconds. If <cite>expires_delta
+:type expires_delta: Optional[float]
+:return: The function `create_refresh_token</cite> returns an encoded refresh token as a string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.decode_refresh_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">decode_refresh_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.decode_refresh_token" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>decode_refresh_token</cite> decodes a refresh token using a secret key and algorithm,
+checks the token scope, and returns the email if valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>refresh_token</strong> – The <cite>decode_refresh_token</cite> function takes a <cite>refresh_token</cite> as a</p>
+</dd>
+</dl>
+<p>parameter. This token is decoded using the <cite>jwt.decode</cite> method with the provided <cite>SECRET_KEY</cite>
+and <cite>ALGORITHM</cite>. If the decoded payload contains a “scope” key with the value “refresh_token”,
+the function extracts
+:type refresh_token: str
+:return: The <cite>decode_refresh_token</cite> function is returning the email extracted from the payload
+of the decoded JWT refresh token if the scope is “refresh_token”. If the scope is not
+“refresh_token”, it raises an HTTPException with a status code of 401 and the detail “Invalid
+scope for token”. If there is an error decoding the token (JWTError), it raises an HTTPException
+with a status code</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.get_current_user">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_current_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(OAuth2PasswordBearer)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AsyncSession</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Depends(get_db)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.get_current_user" title="Link to this definition">¶</a></dt>
+<dd><p>The <cite>get_current_user</cite> function retrieves the current user based on the provided token and
+validates the user’s credentials.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<em>str</em>) – The <cite>token</cite> parameter in the <cite>get_current_user</cite> function is used to authenticatethe user. It is obtained from the request headers and is expected to be a valid JWT (JSON WebToken) that contains the necessary information to identify and authorize the user</p></li>
+<li><p><strong>db</strong> (<em>AsyncSession</em>) – The <cite>db</cite> parameter in the <cite>get_current_user</cite> function is used to pass the databasesession dependency to the function. It is defined as an <cite>AsyncSession</cite> type and is obtainedusing the <cite>get_db</cite> dependency. This parameter allows the function to interact with the databaseasynchronously within the context</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The <cite>get_current_user</cite> function returns the user object retrieved either from the cacheor the database based on the email extracted from the JWT token payload.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.get_email_from_token">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_email_from_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.get_email_from_token" title="Link to this definition">¶</a></dt>
+<dd><p>This asynchronous Python function decodes a JWT token to extract the email address associated
+with it, raising an exception if the token is invalid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> – The <cite>token</cite> parameter is a string that represents a JSON Web Token (JWT) used for</p>
+</dd>
+</dl>
+<p>email verification. The function <cite>get_email_from_token</cite> decodes the token using the provided
+<cite>SECRET_KEY</cite> and <cite>ALGORITHM</cite> to extract the email address from the payload. If the decoding is
+successful
+:type token: str
+:return: the email extracted from the JWT token payload.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.get_password_hash">
+<span class="sig-name descname"><span class="pre">get_password_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.get_password_hash" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>get_password_hash</cite> takes a password as input and returns its hashed value using
+the <cite>pwd_context</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>password</strong> – The <cite>password</cite> parameter is a string that represents the user’s password that</p>
+</dd>
+</dl>
+<p>needs to be hashed for security purposes
+:type password: str
+:return: The <cite>get_password_hash</cite> method is returning the hashed version of the input password
+using the <cite>pwd_context</cite> object.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.oauth2_scheme">
+<span class="sig-name descname"><span class="pre">oauth2_scheme</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;fastapi.security.oauth2.OAuth2PasswordBearer</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#src.services.auth.Auth.oauth2_scheme" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.pwd_context">
+<span class="sig-name descname"><span class="pre">pwd_context</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;CryptContext&gt;</span></em><a class="headerlink" href="#src.services.auth.Auth.pwd_context" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.services.auth.Auth.r">
+<span class="sig-name descname"><span class="pre">r</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;redis.client.Redis(&lt;redis.connection.ConnectionPool(&lt;redis.connection.Connection(host=localhost,port=6379,db=0)&gt;)&gt;)&gt;</span></em><a class="headerlink" href="#src.services.auth.Auth.r" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.services.auth.Auth.verify_password">
+<span class="sig-name descname"><span class="pre">verify_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plain_password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hashed_password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.auth.Auth.verify_password" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>verify_password</cite> compares a plain text password with a hashed password to
+determine if they match.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>plain_password</strong> – The <cite>plain_password</cite> parameter is the password entered by the user in its</p>
+</dd>
+</dl>
+<p>original plain text form before it is hashed for storage or comparison
+:param hashed_password: The <cite>hashed_password</cite> parameter is the password that has already been
+hashed using a cryptographic hashing algorithm. This hashed password is typically stored in a
+database or some other form of storage for security reasons. When a user tries to log in, their
+input password is hashed and compared with the stored hashed password to
+:return: The <cite>verify_password</cite> method is returning the result of calling the <cite>verify</cite> method of
+<cite>pwd_context</cite> with the <cite>plain_password</cite> and <cite>hashed_password</cite> as arguments. This method is
+typically used to verify if a plain text password matches a hashed password.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-src.services.email">
+<span id="rest-api-service-email"></span><h1>REST API service Email<a class="headerlink" href="#module-src.services.email" title="Link to this heading">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.services.email.send_email">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.services.email.</span></span><span class="sig-name descname"><span class="pre">send_email</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EmailStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.services.email.send_email" title="Link to this definition">¶</a></dt>
+<dd><p>The function <cite>send_email</cite> sends an email with a verification token to a specified email address for
+confirmation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<em>EmailStr</em>) – The <cite>send_email</cite> function takes in three parameters:</p></li>
+<li><p><strong>username</strong> – The <cite>username</cite> parameter in the <cite>send_email</cite> function is a string that represents</p></li>
+</ul>
+</dd>
+</dl>
+<p>the username of the recipient to whom the email will be sent. It is used in the email template to
+personalize the message for the recipient
+:type username: str
+:param host: The <cite>host</cite> parameter in the <cite>send_email</cite> function likely refers to the host or domain
+name of the website or application from which the email is being sent. It is used in the email
+template to provide a link or reference back to the host for actions like email verification or
+account activation
+:type host: str</p>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Welcome to Rest API’s documentation!</a></li>
+<li><a class="reference internal" href="#module-main">REST API main</a><ul>
+<li><a class="reference internal" href="#main.lifespan"><code class="docutils literal notranslate"><span class="pre">lifespan()</span></code></a></li>
+<li><a class="reference internal" href="#main.root"><code class="docutils literal notranslate"><span class="pre">root()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.repository.contacts">REST API repository Contacts</a><ul>
+<li><a class="reference internal" href="#src.repository.contacts.create_contact"><code class="docutils literal notranslate"><span class="pre">create_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.delete_contact"><code class="docutils literal notranslate"><span class="pre">delete_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.get_birthdays_soon"><code class="docutils literal notranslate"><span class="pre">get_birthdays_soon()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.get_contact"><code class="docutils literal notranslate"><span class="pre">get_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.get_contacts"><code class="docutils literal notranslate"><span class="pre">get_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.contacts.update_contact"><code class="docutils literal notranslate"><span class="pre">update_contact()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.repository.users">REST API repository Users</a><ul>
+<li><a class="reference internal" href="#src.repository.users.confirmed_email"><code class="docutils literal notranslate"><span class="pre">confirmed_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.create_user"><code class="docutils literal notranslate"><span class="pre">create_user()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.get_user_by_email"><code class="docutils literal notranslate"><span class="pre">get_user_by_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.update_avatar"><code class="docutils literal notranslate"><span class="pre">update_avatar()</span></code></a></li>
+<li><a class="reference internal" href="#src.repository.users.update_token"><code class="docutils literal notranslate"><span class="pre">update_token()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.contacts">REST API routes Contacts</a><ul>
+<li><a class="reference internal" href="#src.routes.contacts.create_contact"><code class="docutils literal notranslate"><span class="pre">create_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.delete_contact"><code class="docutils literal notranslate"><span class="pre">delete_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.get_birthdays_soon"><code class="docutils literal notranslate"><span class="pre">get_birthdays_soon()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.get_contact"><code class="docutils literal notranslate"><span class="pre">get_contact()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.get_contacts"><code class="docutils literal notranslate"><span class="pre">get_contacts()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.contacts.update_contact"><code class="docutils literal notranslate"><span class="pre">update_contact()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.users">REST API routes Users</a><ul>
+<li><a class="reference internal" href="#src.routes.users.get_current_user"><code class="docutils literal notranslate"><span class="pre">get_current_user()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.users.update_avatar_user"><code class="docutils literal notranslate"><span class="pre">update_avatar_user()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.routes.auth">REST API routes Auth</a><ul>
+<li><a class="reference internal" href="#src.routes.auth.confirmed_email"><code class="docutils literal notranslate"><span class="pre">confirmed_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.login"><code class="docutils literal notranslate"><span class="pre">login()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.refresh_token"><code class="docutils literal notranslate"><span class="pre">refresh_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.request_email"><code class="docutils literal notranslate"><span class="pre">request_email()</span></code></a></li>
+<li><a class="reference internal" href="#src.routes.auth.signup"><code class="docutils literal notranslate"><span class="pre">signup()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.services.auth">REST API service Auth</a><ul>
+<li><a class="reference internal" href="#src.services.auth.Auth"><code class="docutils literal notranslate"><span class="pre">Auth</span></code></a><ul>
+<li><a class="reference internal" href="#src.services.auth.Auth.ALGORITHM"><code class="docutils literal notranslate"><span class="pre">Auth.ALGORITHM</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.SECRET_KEY"><code class="docutils literal notranslate"><span class="pre">Auth.SECRET_KEY</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.create_access_token"><code class="docutils literal notranslate"><span class="pre">Auth.create_access_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.create_email_token"><code class="docutils literal notranslate"><span class="pre">Auth.create_email_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.create_refresh_token"><code class="docutils literal notranslate"><span class="pre">Auth.create_refresh_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.decode_refresh_token"><code class="docutils literal notranslate"><span class="pre">Auth.decode_refresh_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.get_current_user"><code class="docutils literal notranslate"><span class="pre">Auth.get_current_user()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.get_email_from_token"><code class="docutils literal notranslate"><span class="pre">Auth.get_email_from_token()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.get_password_hash"><code class="docutils literal notranslate"><span class="pre">Auth.get_password_hash()</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.oauth2_scheme"><code class="docutils literal notranslate"><span class="pre">Auth.oauth2_scheme</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.pwd_context"><code class="docutils literal notranslate"><span class="pre">Auth.pwd_context</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.r"><code class="docutils literal notranslate"><span class="pre">Auth.r</span></code></a></li>
+<li><a class="reference internal" href="#src.services.auth.Auth.verify_password"><code class="docutils literal notranslate"><span class="pre">Auth.verify_password()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-src.services.email">REST API service Email</a><ul>
+<li><a class="reference internal" href="#src.services.email.send_email"><code class="docutils literal notranslate"><span class="pre">send_email()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Contacts API  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to Rest API’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, nazar.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>
